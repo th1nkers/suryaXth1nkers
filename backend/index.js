@@ -7,7 +7,7 @@ const freelanceUsersRoutes = require('./routes/freelanceUsers-routes');
 const HttpError = require('./models/http-error');
 const mongoose = require('mongoose');
 
-const MONGO_URL = 'mongodb+srv://suryasingh11112003:AbzBShZP9GhZSJBx@cluster0.bvgnxyd.mongodb.net/suryaXth1nkers?retryWrites=true&w=majority'
+const MONGO_URL = 'heheh'
 
 const app = express();
 
