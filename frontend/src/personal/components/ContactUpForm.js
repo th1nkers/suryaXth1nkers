@@ -40,7 +40,7 @@ const ContactUpForm = () => {
         setShowModal(false);
         try {
             const responseData = await sendRequest(
-                `${process.env.REACT_BACKEND_URL} + '/users/contactup'`,
+                `${process.env.REACT_BACKEND_URL}/users/contactup`,
                 'POST',
                 JSON.stringify(formData),
                 {
