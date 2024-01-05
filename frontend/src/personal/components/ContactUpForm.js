@@ -39,8 +39,8 @@ const ContactUpForm = () => {
     const okayModalHandler = async () => {
         setShowModal(false);
         try {
-            const responseData = await sendRequest(
-                `${process.env.REACT_BACKEND_URL}/users/contactup`,
+            await sendRequest(
+                `${process.env.REACT_APP_BACKEND_URL}/users/contactup`,
                 'POST',
                 JSON.stringify(formData),
                 {
@@ -48,15 +48,10 @@ const ContactUpForm = () => {
                 }
             );
 
-            console.log("data:", responseData);
-
             modal.showModalHandler(true);
-
             navigate('/');
 
-        } catch (err) {
-            // Handle error if needed
-        }
+        } catch (err) { }
     };
 
     const onCancelModalHandler = () => {

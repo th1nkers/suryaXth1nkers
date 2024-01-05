@@ -64,16 +64,14 @@ const FreeLanceWork = () => {
     setShowModal(false);
 
     try {
-      const responseData = await sendRequest(
-        `${process.env.REACT_BACKEND_URL}/freelance-service/workup`,
+      await sendRequest(
+        `${process.env.REACT_APP_BACKEND_URL}/freelance-service/workup`,
         'POST',
         JSON.stringify(formData),
         {
           'Content-Type': 'application/json'
         }
       );
-
-      console.log("responseData:", responseData);
       
       modal.showModalHandler(true);
       navigate('/');

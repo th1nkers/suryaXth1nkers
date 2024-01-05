@@ -7,9 +7,7 @@ import { FooterContextProvider } from "./shared/context/footer-link-context";
 import { ModalContextProvider } from "./shared/context/modal-context";
 import FreeLanceWork from "./work/pages/FreeLanceWork";
 
-
 function App() {
-
   const router = createBrowserRouter([
     {
       path: '/',
