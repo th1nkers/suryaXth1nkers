@@ -40,7 +40,7 @@ const ContactUpForm = () => {
         setShowModal(false);
         try {
             const responseData = await sendRequest(
-                'http://localhost:5000/api/users/contactup',
+                `${process.env.REACT_BACKEND_URL} + '/users/contactup'`,
                 'POST',
                 JSON.stringify(formData),
                 {
@@ -98,7 +98,7 @@ const ContactUpForm = () => {
                     </div>
                     <div className="contact-submit">
                         {error && <div className="basic-error-info">*// {error}</div>}
-                        <Button  type='submit'>{isLoading ? <LoadingIcon /> : "Send"}</Button>
+                        <Button type='submit'>{isLoading ? <LoadingIcon /> : "Send"}</Button>
                     </div>
                 </form>
             </div>

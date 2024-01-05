@@ -65,7 +65,7 @@ const FreeLanceWork = () => {
 
     try {
       const responseData = await sendRequest(
-        'http://localhost:5000/api/freelance-service/workup',
+        `${process.env.REACT_BACKEND_URL} + '/freelance-service/workup'`,
         'POST',
         JSON.stringify(formData),
         {
