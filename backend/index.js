@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const fs = require('fs');
+require('dotenv').config();
 
 const usersRoutes = require('./routes/users-routes');
 const freelanceUsersRoutes = require('./routes/freelanceUsers-routes');
@@ -7,7 +9,7 @@ const freelanceUsersRoutes = require('./routes/freelanceUsers-routes');
 const HttpError = require('./models/http-error');
 const mongoose = require('mongoose');
 
-const MONGO_URL = 'heheh'
+const MONGO_URL = process.env.MONGO_URL;
 
 const app = express();
 
