@@ -77,26 +77,24 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        gap: 5vw;
         /* padding: 1rem; */
     }
 
-    .photo-and-connect{
+    .photo-and-connect {
         height: 100%;
         margin: 0;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
         gap: .5rem;
     }
 
-    .photo-profile-section{
-       
-    }
+    .photo-profile-section {}
 
-    .photo-profile-section>img{
-        height: 12rem;
-        width: 12rem;
+    .photo-profile-section>img {
+        height: 30vw;
+        width: 30vw;
     }
 
     .connect-profile-section {
@@ -109,17 +107,26 @@
     .profile-link>a>img {
         height: 2rem;
     }
-    
+
     .x-link>a>img {
         height: 2rem;
     }
 
 
-    .profile-detail{
+    .profile-detail {
         padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
+    .profile-detail>h1 {
+        font-size: 2rem;
+    }
+
+
+
+    .profile-detail>p {
+        font-size: .8rem;
+    }
 }

@@ -4,7 +4,8 @@ import "./Footer.css";
 import { FooterContext } from './shared/context/footer-link-context';
 import SuccessModal from './shared/components/uiElements/SuccessModal';
 import { ModalContext } from './shared/context/modal-context';
-import up from './assets/work-assets/freelance-form/up.gif'
+import up from './assets/work-assets/freelance-form/up.gif';
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 const Footer = () => {
 
@@ -33,7 +34,7 @@ const Footer = () => {
   if (!footerLink.isHome && !footerLink.isNoFooterLinks) {
     content = (
       <Link className='pages-link' to="/" >
-        Back To Home Page .
+          Home.
       </Link>
     )
   }

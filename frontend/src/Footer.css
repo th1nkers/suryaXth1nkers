@@ -91,6 +91,8 @@
 
     .footer-freelance>h1{
         font-size: 4vw;
+        font-weight: bold;
+        padding: .2rem;
     }
 
     .footer-freelance>img {
@@ -98,7 +100,7 @@
     }
 
     .pages-link{
-        padding: .7rem .2rem;
+        padding: .7rem .4rem;
         border-radius: 3px;
     }
 }

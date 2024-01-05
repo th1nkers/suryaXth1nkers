@@ -3,7 +3,7 @@
     grid-template-rows: 20% 80%;
     gap: .8rem;
     background-color: #EEC759;
-    padding: 1rem;
+    /* padding: 1rem; */
     /* padding: 1vw; */
     border-radius: 5px;
     overflow: hidden;
@@ -64,7 +64,25 @@
 
 @media only screen and (max-width: 770px) {
     .website-ex-section {
-        height: 32rem;
-        width: 95%;
+        height: 36rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .website-ex-header {
+        font-size: 7vw;
+        height: 4rem;
+    }
+
+    .no-website-ex>img {
+        height: 8rem;
+        width: 17rem;
+        border-radius: 5px;
+    }
+
+    .no-website-ex>h2{
+        width: 75%;
+        font-size: 3vw;
     }
 }

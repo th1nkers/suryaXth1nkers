@@ -5,7 +5,6 @@
   border-radius: 8px;
   display: grid;
   grid-template-rows: 2fr 8fr;
-  overflow: auto;
 }
 
 .modal-freelance {
@@ -18,10 +17,10 @@
 
 .modal-contactUp {
   position: fixed;
-  top: 8%;
+  top: 5.9%;
   left: 3%;
-  height: 75%;
-  width: 61.5%;
+  height: 80%;
+  width: 62%;
 }
 
 .modal__header {
@@ -42,15 +41,17 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between ;
+  overflow: auto;
 }
 
 .modal__content {
-  padding-left: 2rem;
+  padding-left: 1rem;
   height: 80%;
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
-  font-size: 1vw;
+  font-size: 1rem;
 }
 
 .modal__footer {
@@ -60,7 +61,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.4vw;
 }
 
 #modal-back {
@@ -72,14 +73,9 @@
   padding: .5rem;
   outline: 1px solid black;
   border-radius: 5px;
-}
-
-#modal-back:hover {
-  background-color: rgb(240, 240, 240);
-}
-
-#modal-back>svg {
-  height: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
 }
 
 .modal-para {
@@ -88,34 +84,38 @@
 }
 
 .modal-para>p {
-  font-size: large;
+  font-size: 1.17rem;
 }
 
-/* @media (min-width: 768px) {
-    .modal {
-      left: calc(50% - 20rem);
-      width: 40rem;
-    }
+@media only screen and (max-width: 770px) {
+
+  .modal-freelance {
+    position: fixed;
+    top: 15%;
+    left: 5%;
+    height: 65%;
+    width: 90%;
   }
-  
-  .modal-enter {
-    transform: translateY(-10rem);
-    opacity: 0;
+
+  .modal-contactUp {
+    position: fixed;
+    top: 25%;
+    left: 5%;
+    height: 40%;
+    width: 90%;
+    font-size: 1rem;
   }
-  
-  .modal-enter-active {
-    transform: translateY(0);
-    opacity: 1;
-    transition: all 200ms;
+
+  .modal__header h2 {
+    font-size: 1.2rem;
   }
-  
-  .modal-exit {
-    transform: translateY(0);
-    opacity: 1;
+
+  .modal-para>p {
+    font-size: .9rem;
   }
-  
-  .modal-exit-active {
-    transform: translateY(-10rem);
-    opacity: 0;
-    transition: all 200ms;
-  } */
+
+
+  #modal-back {
+    font-size: 1rem;
+  }
+}

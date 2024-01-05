@@ -168,7 +168,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    color: rgb(0, 0, 0);
+    color: rgb(72, 1, 1);
     font-weight: bold;
     border: 4px solid red;
 }
@@ -250,8 +250,14 @@
         margin:  0;
         width: 35%;
         height: 2.7rem;
-
+        font-size: 4.4vw;
         align-self: flex-end;
     }
 
+
+    .basic-error-info {
+        font-size: 3.5vw;
+        margin-left: 2vw;
+    }
+    
 }

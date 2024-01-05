@@ -43,7 +43,7 @@ const Profile = () => {
             </div>
             <div className="profile-detail">
                 <h1>Suryansh Singh</h1>
-                <p>MERN | Full Web Stack: HTML, CSS, JS, ReactJs, NodeJs, ExpressJs, MongoDB, Socket.io, NextJs, GraphQL, my-SQL based database (noSQL), and continue learning. </p>
+                <p>MERN | Full Web Stack Developer: HTML, CSS, JS, ReactJs, NodeJs, ExpressJs, MongoDB, Socket.io, NextJs, GraphQL, my-SQL based database (noSQL), and continue learning. </p>
             </div>
         </div>
     )

@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react';
-import { useContext } from 'react';
+/* SuccessModal.jsx */
+import React, { useContext, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { CSSTransition } from 'react-transition-group';
 import { ModalContext } from '../../context/modal-context';
-import { IoCheckmarkDoneCircle } from "react-icons/io5";
+import { IoCheckmarkDoneCircle } from 'react-icons/io5';
+import { Transition } from 'react-transition-group';
 import './SuccessModal.css';
 
 const SuccessModal = (props) => {
-
     const modal = useContext(ModalContext);
 
     useEffect(() => {
@@ -16,7 +15,7 @@ const SuccessModal = (props) => {
             setTimeout(() => {
                 modal.showModalHandler(false);
                 // props.onCancel();
-            }, 5000); // 3 seconds
+            }, 5000); // 5 seconds
         }
     }, [modal, props.onCancel]);
 
@@ -28,27 +27,27 @@ const SuccessModal = (props) => {
                 </h2>
                 <IoCheckmarkDoneCircle />
             </div>
-        )
-
+        );
 
         return ReactDOM.createPortal(content, document.getElementById('success-modal-hook'));
-    }
+    };
 
     return (
-        <CSSTransition
+        <Transition
             in={modal.showSuccessModal}
             mountOnEnter
             unmountOnExit
             timeout={500}
-            classNames={{
-                enter: 'success-modal-enter',
-                exit: 'success-modal-exit',
-            }}
         >
-            <ModalOverlay {...props} />
-        </CSSTransition>
+            {(state) => (
+                <ModalOverlay style={{
+                    transition: 'transform 1s ease-in-out, opacity 1s ease-in-out',
+                    transform: state === 'entered' ? 'translateX(0)' : 'translateX(-100%)',
+                    opacity: state === 'entered' ? 1 : 0,
+                }} />
+            )}
+        </Transition>
+    );
+};
 
-    )
-}
-
-export default SuccessModal
+export default SuccessModal;

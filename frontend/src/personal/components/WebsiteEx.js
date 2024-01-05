@@ -7,22 +7,6 @@ import LoadingIcon from '../../shared/components/uiElements/LoadingIcon';
 import { useHttpClient } from '../../shared/hooks/http-hook';
 import "./WebsiteEx.css";
 
-// fetch from the backend api
-
-
-
-const WEBSITE_DATA = [
-    // {
-    //     website_name: "Google the world best app",
-    //     website_link: "https://www.google.com/"
-    // },
-    // {
-    //     website_name: "ChatAPI",
-    //     website_link: "https://chat.openai.com"
-    // },
-]
-
-
 
 const WebsiteEx = () => {
     const { isLoading, error, sendRequest, clearError } = useHttpClient();
@@ -36,7 +20,7 @@ const WebsiteEx = () => {
                 const data = await sendRequest(
                     'http://localhost:5000/api/admin/websitesUp'
                 );
-                setWebsiteLinkData(data);  // Update websiteLinkDATA with the fetched data
+                setWebsiteLinkData(data);
             } catch (err) {
                 // Handle error if needed
             }
@@ -49,7 +33,7 @@ const WebsiteEx = () => {
     let content;
 
     if (isLoading) {
-        content = <>{error}</>
+        content = <LoadingIcon />
     }
 
     if (websiteLinkDATA.length > 0) {

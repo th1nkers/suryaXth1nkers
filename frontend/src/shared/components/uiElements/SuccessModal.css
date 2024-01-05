@@ -3,6 +3,7 @@
         transform: translateX(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -14,6 +15,7 @@
         transform: translateX(0);
         opacity: 1;
     }
+
     to {
         transform: translateX(-100%);
         opacity: 0;
@@ -33,14 +35,23 @@
     justify-content: center;
     text-align: center;
     height: 3rem;
-    animation-duration: 0.5s;
+    animation-duration: 1s; 
     animation-timing-function: ease-in-out;
 }
 
 .success-modal-enter {
-    animation: slideIn 0.5s forwards;
+    animation: slideIn forwards;
 }
 
 .success-modal-exit {
-    animation: slideOut 0.5s forwards;
+    animation: slideOut forwards;
+}
+
+
+@media only screen and (max-width: 770px) {
+    .success-modal {
+        top: 2.4%;
+        padding: 0 .1rem;
+        height: 2.2rem;
+    }
 }

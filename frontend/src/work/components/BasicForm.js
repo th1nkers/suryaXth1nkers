@@ -148,7 +148,7 @@ const Basic = ({ onSubmit,error, isLoading, ...props }) => {
           />
         </div>
         {error && <div className="basic-error-info">*// {error}</div> }        
-        <Button type="Submit" id="basic-form-submit">{isLoading? <LoadingIcon/>: "Send"}</Button>
+        <Button type="Submit" id="basic-form-submit">{isLoading? <LoadingIcon/>: "Submit"}</Button>
       </form>
     </>
   )

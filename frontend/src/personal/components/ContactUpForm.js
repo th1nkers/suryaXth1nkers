@@ -93,7 +93,7 @@ const ContactUpForm = () => {
                     <div className="contact-input">
                         <Input label="Email:" id="email" type="email" name="email" required />
                     </div>
-                    <div className="contact-textarea">
+                    <div className="contact-input">
                         <TextArea label="Reason:" name="reason" id="reason" type="text" required />
                     </div>
                     <div className="contact-submit">
