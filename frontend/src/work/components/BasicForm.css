@@ -1,0 +1,257 @@
+.basic-form-section {
+    height: 34rem;
+    width: 98%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    gap: 1rem;
+    padding: 1vw;
+}
+
+.basic-form-input {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.5vw;
+}
+
+.basic-form-input>input {
+    height: 100%;
+    width: 100%;
+    padding-left: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.5vw;
+    border: 4px solid black;
+}
+
+.basic-form-input>input:focus {
+    outline: none;
+}
+
+.basic-form-input>textarea {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.5vw;
+    resize: none;
+    outline: none;
+    border: 4px solid black;
+}
+
+.basic-form-input>textarea:focus {}
+
+.basic-form-input>label {}
+
+.basic-form-input>input::placeholder {
+    font-size: 1.3vw;
+    /* font-weight: bold; */
+}
+
+.basic-form-input>textarea::placeholder {
+    font-size: 1.3vw;
+    /* font-weight: bold; */
+}
+
+
+/* -----------id-targeted */
+
+.basic-form-name {
+    grid-area: 1 / 1 / 3 / 7;
+}
+
+.basic-form-email {
+    grid-area: 1 / 7 / 3 / 16;
+}
+
+.basic-form-fields {
+    grid-area: 1 / 16 / 9/ 22;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: .8rem;
+}
+
+.fields-tag {
+    height: 80%;
+    padding: .4rem;
+    font-size: 1.2vw;
+    border: 3px dotted white;
+    border-radius: 5px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.basic-tag {
+    list-style: none;
+    background-color: white;
+    border-radius: 5px;
+    height: 1.5rem;
+    width: fit-content;
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+
+#weblinktag {
+    color: blue;
+}
+
+.basic-tag-close-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.fields-tag-input {
+    height: 20%;
+}
+
+.fields-tag-input>input::placeholder {
+    font-size: 1vw;
+}
+
+.basic-form-outlook {
+    grid-area: 3 / 1 / 16 / 12;
+}
+
+.basic-form-audience {
+    grid-area: 3 / 12 / 11 / 16;
+}
+
+.basic-form-exampleWebLink {
+    grid-area: 12 / 12 / 17 / 22;
+}
+
+#basic-exampleWebLink {
+    color: blue;
+}
+
+.basic-contentGoogleDriveLink {
+    grid-area: 17/1/19/18;
+    color: blue;
+}
+
+.basic-telegramId {
+    grid-area: 9 / 16/ 12 / 22;
+}
+
+.basic-telegramId>input::placeholder {
+    font-size: 1vw;
+}
+
+.basic-contentGoogleDriveLink>textarea{
+    padding: .4rem 0 0 1rem;
+    color: blue;
+}
+
+#basic-form-submit {
+    grid-area: 17 / 18 / 21 / 22;
+    margin-top: 1rem;
+    height: 80%;
+    width: 100%;
+}
+
+#basic-form-submit>img{
+    height: 4rem;
+}
+
+.basic-error-info {
+    grid-area: 19 / 1 / 21 / 18;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: 4px solid red;
+}
+
+
+
+@media only screen and (max-width: 770px) {
+
+    .basic-form-section {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .basic-form-input>input {
+        height: 3rem;
+        width: 100%;
+        padding-left: 2vw;
+        font-size: 1.2rem;
+        border: 4px solid black;
+    }
+    
+    .basic-form-input>input:focus {
+        outline: none;
+    }
+    
+    .basic-form-input>textarea {
+        height: 16rem;
+        padding-left: 2vw;
+        font-size: 1.1rem;
+    }
+    
+    .basic-form-input>textarea:focus {}
+    
+    .basic-form-input>label {}
+    
+    .basic-form-input>input::placeholder {
+        font-size: 1rem;
+        /* font-weight: bold; */
+    }
+    
+    .basic-form-input>textarea::placeholder {
+        font-size: 1rem;
+        /* font-weight: bold; */
+    }
+
+
+    .basic-form-fields {
+    }
+    
+    .fields-tag {
+        height: 6rem;
+        font-size: 1rem;
+    }
+    
+    .basic-tag {
+        list-style: none;
+        background-color: white;
+        border-radius: 5px;
+        height: 1.5rem;
+        width: fit-content;
+        padding: 0.4rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    .basic-form-audience>textarea{
+        height: 7rem;
+    }
+
+    .basic-contentGoogleDriveLink>textarea{
+        height: 4rem;
+    }
+    
+
+    #basic-form-submit{
+        margin:  0;
+        width: 35%;
+        height: 2.7rem;
+
+        align-self: flex-end;
+    }
+
+}

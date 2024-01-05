@@ -1,0 +1,12 @@
+.root-layout {
+    gap: .7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 770px) {
+    .root-layout{
+        flex-direction: column-reverse;
+    }
+}

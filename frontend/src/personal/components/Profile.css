@@ -1,0 +1,125 @@
+.profile-detail-section {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 5px;
+    background-color: #CD5C08;
+}
+
+.photo-and-connect {
+    /* height: 70%; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.photo-profile-section {
+    overflow: hidden;
+}
+
+.photo-profile-section>img {
+    height: 22vw;
+    width: 22vw;
+    border-radius: 5px;
+}
+
+.connect-profile-section {
+    list-style: none;
+    padding: 0;
+    /* height: 80%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    border-radius: 5px;
+}
+
+.profile-link>a>img {
+    height: 2.5rem;
+    /* margin: .2rem 0; */
+    padding: 0;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.x-link>a>img {
+    height: 2.5rem;
+    margin: .2rem 0;
+    padding: 0;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.profile-detail {
+    height: 100%;
+    width: 100%;
+    padding-top: 1rem;
+}
+
+
+.profile-detail>p {
+    font-size: large;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 770px) {
+
+    .profile-detail-section {
+        height: 17rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        /* padding: 1rem; */
+    }
+
+    .photo-and-connect{
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: .5rem;
+    }
+
+    .photo-profile-section{
+       
+    }
+
+    .photo-profile-section>img{
+        height: 12rem;
+        width: 12rem;
+    }
+
+    .connect-profile-section {
+        margin: 0;
+        flex-direction: row;
+        gap: .5rem;
+    }
+
+
+    .profile-link>a>img {
+        height: 2rem;
+    }
+    
+    .x-link>a>img {
+        height: 2rem;
+    }
+
+
+    .profile-detail{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}

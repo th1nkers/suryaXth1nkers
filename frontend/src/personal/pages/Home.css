@@ -1,0 +1,16 @@
+.personal-home-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1vw;
+}
+
+
+@media only screen and (max-width: 770px) {
+    .personal-home-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .7rem;
+    }
+}

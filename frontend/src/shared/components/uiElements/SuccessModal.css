@@ -1,0 +1,46 @@
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.success-modal {
+    z-index: 100;
+    bottom: 2%;
+    left: 2%;
+    padding: 0 2rem;
+    position: fixed;
+    background-color: #6A9C89;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 3rem;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.success-modal-enter {
+    animation: slideIn 0.5s forwards;
+}
+
+.success-modal-exit {
+    animation: slideOut 0.5s forwards;
+}
