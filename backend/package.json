@@ -1,11 +1,11 @@
 {
   "name": "suryath1nker-backend",
   "version": "1.0.0",
-  "description": "The backend of the my portfolio website.",
+  "description": "The backend of my portfolio website.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index.js"
+    "start": "nodemon index.js"
   },
   "author": "suryaXth1nkers",
   "license": "ISC",
