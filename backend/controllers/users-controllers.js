@@ -1,7 +1,7 @@
 const { validationResult } = require('express-validator');
 
 const User = require('../models/user');
-const Page = require('../models/Page');
+const Page = require('../models/page');
 
 const HttpError = require('../models/http-error');
 
