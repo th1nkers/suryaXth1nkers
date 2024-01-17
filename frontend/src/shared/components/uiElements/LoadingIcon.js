@@ -1,11 +1,11 @@
 import React from 'react';
 import LoadingSvg from '../../../assets/shared/LoadingIcon.svg';
 
-const LoadingIcon = () => {
+const LoadingIcon = ({error}) => {
     return (
-        <>
-            <img src={LoadingSvg} alt="loading..." />
-        </>
+        <div className="center">
+            {error ? <h4 id='loading-error'>{error}</h4> : <img src={LoadingSvg} alt="loading..." />}
+        </div>
     )
 }
 

@@ -1,9 +1,28 @@
 const { validationResult } = require('express-validator');
 
 const User = require('../models/user');
+const Page = require('../models/Page');
 
 const HttpError = require('../models/http-error');
 
+const getWebEx = async (req,res,next) => {
+    try{
+        const responseData = await Page.findOne({});
+
+        if (!responseData) {
+            const error = "No data found!";
+            return next(new HttpError(error, 404));
+        }
+        res.status(200).json(responseData);
+        
+    }catch(err){
+        const error = "Some server error occured, please try again later!"
+        return next(
+            new HttpError(error)
+        )
+    }
+
+}
 
 const contactUp = async (req, res, next) => {
     const errors = validationResult(req);
@@ -78,3 +97,4 @@ const contactUp = async (req, res, next) => {
 }
 
 exports.contactUp = contactUp;
+exports.getWebEx = getWebEx;

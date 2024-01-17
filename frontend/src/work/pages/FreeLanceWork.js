@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../shared/components/forms/Button';
 import MainCard from '../../shared/components/uiElements/MainCard';
@@ -13,22 +13,13 @@ import { ModalContext } from '../../shared/context/modal-context';
 const FreeLanceWork = () => {
 
   const modal = useContext(ModalContext)
-
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({});
   const [fieldTags, setFieldTags] = useState([]);
   const [websiteLinkTags, setWebsiteLinkTags] = useState([]);
 
-  const { isLoading, error, sendRequest, clearError } = useHttpClient();
-
-  useEffect(() => {
-    document.title = "th1nkers: FREELANCE SERVICE";
-    return () => {
-      document.title = "th1nkers";
-    };
-  }, []);
-
+  const { isLoading, error, sendRequest } = useHttpClient();
 
   const selectedTags = tags => {
     setFieldTags(tags)
@@ -59,7 +50,6 @@ const FreeLanceWork = () => {
     setShowModal(true);
   };
 
-
   const okayModalHandler = async () => {
     setShowModal(false);
 
@@ -72,7 +62,7 @@ const FreeLanceWork = () => {
           'Content-Type': 'application/json'
         }
       );
-      
+
       modal.showModalHandler(true);
       navigate('/');
     } catch (err) { }
@@ -81,7 +71,7 @@ const FreeLanceWork = () => {
 
   const onCancelModalHandler = () => {
     setShowModal(false);
-  };
+  }
 
   return (
     <MainCard className="freelance-section">
@@ -90,9 +80,14 @@ const FreeLanceWork = () => {
         header="Review your info and confirm for submission."
         show={showModal}
         onCancel={onCancelModalHandler}
-        clearModalFooter={<button onClick={onCancelModalHandler} id="modal-back"> <FaArrowLeft /> Back</button>}
+        clearModalFooter={
+          <button onClick={onCancelModalHandler} id="modal-back">
+            <FaArrowLeft /> Back
+          </button>
+        }
         footer={<Button onClick={okayModalHandler}>Confirm</Button>}
       >
+
         {formData && Object.keys(formData).length > 0 && (
           <div className='modal-para'>
             {Object.entries(formData).map(([key, value]) => (
@@ -100,7 +95,9 @@ const FreeLanceWork = () => {
             ))}
           </div>
         )}
+
       </Modal>
+
       <BasicForm
         tags={[]}
         webLinkTags={[]}
@@ -110,6 +107,7 @@ const FreeLanceWork = () => {
         error={error}
         isLoading={isLoading}
       />
+
     </MainCard>
   )
 }

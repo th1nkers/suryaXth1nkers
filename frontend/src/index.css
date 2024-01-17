@@ -11,15 +11,45 @@ body {
     background-color: #F5F7F8;
 }
 
+
 h1 {
     margin: 0;
 }
 
 .center {
+    height: 90vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.mobile {
+    display: none;
+}
+
+.no-mobile{
+    display: unset;
+}
+
+@media only screen and (max-width: 770px) {
+    .center {
+        height: 90vh;
+    }
+
+    #loading-error {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .no-mobile {
+        display: none;
+    }
+
+    .mobile {
+        display: unset;
+    }
 }
 
 .layout-section {

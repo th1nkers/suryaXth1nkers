@@ -55,7 +55,7 @@ const Basic = ({ onSubmit,error, isLoading, ...props }) => {
             type="text"
             name="name"
             placeholder='Enter your legal name.'
-            required="true"
+            required={true}
           />
         </div>
 
@@ -65,7 +65,7 @@ const Basic = ({ onSubmit,error, isLoading, ...props }) => {
             name="email"
             placeholder='Enter your official email.'
             id="basic-email"
-            required="true"
+            required={true}
           />
         </div>
 
@@ -96,7 +96,7 @@ const Basic = ({ onSubmit,error, isLoading, ...props }) => {
             type="text"
             name="telegramId"
             placeholder='Telegram Id (msg/calling purpose)'
-            required="true"
+            required={true}
           />
         </div>
 
@@ -105,7 +105,7 @@ const Basic = ({ onSubmit,error, isLoading, ...props }) => {
             type="text"
             name="outlook"
             placeholder="Write how you imagine your website to look like."
-            required="true"
+            required={true}
           />
         </div>
 
@@ -114,7 +114,7 @@ const Basic = ({ onSubmit,error, isLoading, ...props }) => {
             type="text"
             name="targetAudience"
             placeholder="Audiences your website want to target. (Ex: age group, people product needs etc.)"
-            required="true"
+            required={true}
           />
         </div>
 

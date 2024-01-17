@@ -1,17 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./Profile.css";
 import dp from "../../assets/personal-assets/dp.jpg";
 import x from "../../assets/personal-assets/x.png";
 import linkedIn from "../../assets/personal-assets/linkedIn.png";
 import github from "../../assets/personal-assets/github.png";
+import "./Profile.css";
 
-const Profile = () => {
+const Profile = ({ profileData }) => {
+
+    const {profile} = profileData;
+
     return (
         <div className="profile-detail-section">
             <div className="photo-and-connect">
                 <div className="photo-profile-section">
-                    <img src={dp} alt="dp" />
+                    <img src={dp} alt={profile.name} />
                 </div>
                 <ul className="connect-profile-section">
                     <li className="profile-link">
@@ -30,7 +33,7 @@ const Profile = () => {
                             <img src={linkedIn} alt="xIcon" />
                         </Link>
                     </li>
-                    <li className="x-link" >
+                    <li className="profile-link" >
                         <Link
                             to="https://twitter.com/suryaXth1nkers"
                             target="_blank" rel="noopener noreferrer"
@@ -42,8 +45,8 @@ const Profile = () => {
                 </ul>
             </div>
             <div className="profile-detail">
-                <h1>Suryansh Singh</h1>
-                <p>MERN | Full Web Stack Developer: HTML, CSS, JS, ReactJs, NodeJs, ExpressJs, MongoDB, Socket.io, NextJs, GraphQL, my-SQL based database (noSQL), and continue learning. </p>
+                <h1>{profile.name}</h1>
+                <p>{profile.info}</p>
             </div>
         </div>
     )

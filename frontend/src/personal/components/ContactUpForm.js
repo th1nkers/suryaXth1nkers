@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState,useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useHttpClient } from '../../shared/hooks/http-hook';
 import Button from '../../shared/components/forms/Button';
@@ -6,9 +6,8 @@ import { Input, TextArea } from '../../shared/components/forms/Input';
 import LoadingIcon from '../../shared/components/uiElements/LoadingIcon';
 import Modal from '../../shared/components/uiElements/Modal';
 import { FaArrowLeft } from "react-icons/fa6";
-import './ContactUpForm.css';
-import { useContext } from 'react';
 import { ModalContext } from '../../shared/context/modal-context';
+import './ContactUpForm.css';
 
 const ContactUpForm = () => {
 
@@ -17,7 +16,7 @@ const ContactUpForm = () => {
     const [showModal, setShowModal] = useState(false);
     const [formData, setFormData] = useState({});
 
-    const { isLoading, error, sendRequest, clearError } = useHttpClient();
+    const { isLoading, error, sendRequest } = useHttpClient();
 
 
     const submitHandler = async (e) => {
@@ -83,13 +82,31 @@ const ContactUpForm = () => {
                 </div>
                 <form className="contact-form-section" onSubmit={submitHandler}>
                     <div className="contact-input">
-                        <Input label="Name:" id="name" type="text" name="name" required />
+                        <Input
+                            label="NAME:"
+                            id="name"
+                            type="text"
+                            name="name"
+                            placeholder="Your legal name." required
+                        />
                     </div>
                     <div className="contact-input">
-                        <Input label="Email:" id="email" type="email" name="email" required />
+                        <Input
+                            label="EMAIL:"
+                            id="email"
+                            type="email"
+                            name="email"
+                            placeholder="Your official email id." required
+                        />
                     </div>
                     <div className="contact-input">
-                        <TextArea label="Reason:" name="reason" id="reason" type="text" required />
+                        <TextArea
+                            label="REASON:"
+                            name="reason"
+                            id="reason"
+                            type="text"
+                            placeholder="Reason for why you are contacting me." required
+                        />
                     </div>
                     <div className="contact-submit">
                         {error && <div className="basic-error-info">*// {error}</div>}

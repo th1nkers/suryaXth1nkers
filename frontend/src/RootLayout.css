@@ -1,12 +1,14 @@
 .root-layout {
     gap: .7vw;
+    /* height: 98vh; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 @media only screen and (max-width: 770px) {
     .root-layout{
+        height: unset;
         flex-direction: column-reverse;
     }
 }

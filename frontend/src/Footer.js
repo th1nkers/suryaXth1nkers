@@ -1,11 +1,10 @@
 import { useContext, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import "./Footer.css";
 import { FooterContext } from './shared/context/footer-link-context';
 import SuccessModal from './shared/components/uiElements/SuccessModal';
 import { ModalContext } from './shared/context/modal-context';
 import up from './assets/work-assets/freelance-form/up.gif';
-import { IoIosArrowRoundBack } from "react-icons/io";
+import "./Footer.css";
 
 const Footer = () => {
 
@@ -29,20 +28,33 @@ const Footer = () => {
   }, [location, footerLink]);
 
 
+  useEffect(() => {
+    if (modal.showSuccessModal) {
+      modal.showModalHandler(true);
+      setTimeout(() => {
+        modal.showModalHandler(false);
+      }, 3000);
+    }
+  }, [modal]);
+
+
   let content;
 
   if (!footerLink.isHome && !footerLink.isNoFooterLinks) {
     content = (
       <Link className='pages-link' to="/" >
-          Home.
+        Home
       </Link>
     )
   }
 
   else if (footerLink.isHome && !footerLink.isNoFooterLinks) {
-    content = (<Link className='pages-link' to="/contact-up" >
-      Contact Me.
-    </Link>)
+    content = (<>
+      <Link className='pages-link' to="/contact-up" >
+        Contact Me
+      </Link>
+    </>
+    )
   }
 
   let footerLinkContent = (
@@ -53,28 +65,26 @@ const Footer = () => {
       </div>
     ) : (
       <div className="footer-links">
-        <Link to="freelance-service" id="freelance-service">Freelance Service</Link>
+        <Link to="freelance-service" id="freelance-service">
+          <span>Freelance</span>{" "}
+          <span>Service</span>
+        </Link>
         {content}
-      </div>)
+      </div>
+    )
   )
 
   return (
-    <div className='footer'>
-      {modal.showSuccessModal ? (
-        <div className="footer-modal">
-          <SuccessModal
-            onCancel={() => modal.showModalHandler(false)}
-          />
-        </div>
-      ) : (
+    <>
+      <SuccessModal show={modal.showSuccessModal} />
+      <div className='footer'>
         <div className='footer-main'>
-          <span id="footer-copyright">©</span>
           <h3>suryaXth1nkers</h3>
         </div>
-      )}
 
-      {footerLinkContent}
-    </div>
+        {footerLinkContent}
+      </div>
+    </>
   )
 }
 
