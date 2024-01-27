@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import dp from "../../assets/personal-assets/dp.jpg";
+import docs from "../../assets/personal-assets/docs.png";
 import x from "../../assets/personal-assets/x.png";
 import linkedIn from "../../assets/personal-assets/linkedIn.png";
 import github from "../../assets/personal-assets/github.png";
+import ResumeDetail from "../../assets/personal-assets/ResumeDetail+.pdf";
 import "./Profile.css";
 
 const Profile = ({ profileData }) => {
@@ -41,7 +43,13 @@ const Profile = ({ profileData }) => {
                             <img src={x} alt="xIcon" />
                         </Link>
                     </li>
-                    {/* <li className="connect-link">Connect</li> */}
+                    <li className="profile-link" >
+                        <Link to={ResumeDetail}
+                            target="_blank" rel="noopener noreferrer"
+                        >
+                            <img src={docs} alt="resume-icon" />
+                        </Link>
+                    </li>
                 </ul>
             </div>
             <div className="profile-detail">
