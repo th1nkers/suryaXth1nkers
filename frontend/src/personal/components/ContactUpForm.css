@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     gap: .7rem;
-    margin-right: 1rem;
 }
 
 .contact-input {
@@ -22,7 +21,7 @@
 .contact-input>input {
     padding-left: 1rem;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 25px;
     font-size: x-large;
     height: 4vw;
     outline: none;
@@ -34,7 +33,7 @@
     padding: 1rem;
     resize: none;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 25px;
     outline: none;
 }
 
@@ -56,7 +55,7 @@
 @media only screen and (max-width: 770px) {
 
     .contact-form-section {
-        margin: 2vw;
+        margin: 4vw 0;
     }
 
     .contact-input>textarea {

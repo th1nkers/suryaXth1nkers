@@ -78,7 +78,7 @@ const ContactUpForm = () => {
 
             <div className="website-ex-section">
                 <div className="website-ex-header">
-                    Connect With Me.
+                    Connect With Me
                 </div>
                 <form className="contact-form-section" onSubmit={submitHandler}>
                     <div className="contact-input">

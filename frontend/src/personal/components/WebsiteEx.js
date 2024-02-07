@@ -13,16 +13,16 @@ const WebsiteEx = ({ websiteData }) => {
             websiteData.map(webItem => {
                 return (
                     <li className="website-ex-list" key={webItem.link}>
-                        <h2>
-                            {webItem.header + " "}
-                        </h2>
                         <Link
                             to={webItem.link}
                             className="website-name"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                          <FaRegDotCircle />  {webItem.link}
+                            <h4>
+                                <FaRegDotCircle /> {" "}
+                                {webItem.header}
+                            </h4>
                         </Link>
                         <p>{webItem.detail}</p>
                     </li>
@@ -41,7 +41,7 @@ const WebsiteEx = ({ websiteData }) => {
     return (
         <div className="website-ex-section">
             <div className="website-ex-header">
-                Websites I build.
+                Websites Experiences
             </div>
             <ul className={websiteData.length > 0 ? "website-ex" : "no-website-ex"}>
                 {content}

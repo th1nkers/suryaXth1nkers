@@ -20,7 +20,7 @@ function App() {
       children: [
         { index: true, element: <HomePage /> },
         { path: "contact-up", element: <HomePage /> },
-        { path: "freelance-service", element: <FreeLanceWork /> },
+        // { path: "freelance-service", element: <FreeLanceWork /> },
       ]
     }
   ])

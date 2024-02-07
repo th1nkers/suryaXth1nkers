@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+.footer-section {
+    display: flex;
+    justify-content: center;
+}
+
 .footer {
-    width: 100%;
-    margin: 0 2vw;
-    width: 96%;
+    width: 94%;
     position: fixed;
-    bottom: 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #F5F7F8;
 }
 
 .footer-main {
@@ -17,19 +20,21 @@
     gap: .4rem;
 }
 
-#footer-copyright {
-    font-size: 1.8rem;
+.footer-main>h3 {
     color: gray;
 }
 
 .pages-link {
     color: white;
     background-color: black;
-    padding: .5vw 1vw;
+    padding: .8vw 1vw;
     font-size: larger;
-    border-radius: 2px;
+    border-radius: 15px;
     text-decoration: none;
     outline: 2px solid black;
+    display: flex;
+    align-items: center;
+    
 }
 
 .pages-link:hover {
@@ -68,11 +73,18 @@
 }
 
 #freelance-service {
-    color: blue;
-    border: 1px dotted blue;
     padding: .6rem .2rem;
-    border-radius: 3px;
-    text-align: justify;
+}
+
+#freelance-service:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+#freelance-service>span {
+    color: blue;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.5rem;
 }
 
 
@@ -83,6 +95,10 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+
+    .footer-section {
+        margin: 0 4px;
     }
 
     .footer {
@@ -104,11 +120,6 @@
         gap: 2vw;
     }
 
-    #footer-copyright {
-        font-size: 6vw;
-        color: gray;
-    }
-
     .footer-freelance>h1 {
         font-size: 4.2vw;
         padding: .4rem .2rem;
@@ -119,8 +130,23 @@
     }
 
     .pages-link {
-        padding: 2vw;
         border-radius: 5px;
+        padding: 2vw;
+        font-size: .8rem;
+        font-weight: bold;
+    }
+
+    #freelance-service {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #freelance-service>span {
+        font-size: .8rem;
+    }
+
+    #freelance-service>span:nth-child(2) {
+        margin-top: -12px;
     }
 
 }

@@ -1,13 +1,14 @@
 .main-card-section {
     margin: 1.8vw 2vw 0 2vw;
-    padding: 1vw;
-    border: 2px solid black;
-    border-radius: 5px;
+    padding: 1vw 1vw 0 1vw;
+    /* height: 85vh; */
+    /* border-radius: 5px; */
 }
 
 
 @media only screen and (max-width: 770px) {
     .main-card-section {
         margin: 0 2vw 1.8vw 2vw;
+        height: unset;
     }
 }

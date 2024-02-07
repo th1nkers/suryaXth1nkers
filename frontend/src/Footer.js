@@ -4,6 +4,7 @@ import { FooterContext } from './shared/context/footer-link-context';
 import SuccessModal from './shared/components/uiElements/SuccessModal';
 import { ModalContext } from './shared/context/modal-context';
 import up from './assets/work-assets/freelance-form/up.gif';
+import { IoArrowBackCircle } from "react-icons/io5";
 import "./Footer.css";
 
 const Footer = () => {
@@ -43,7 +44,7 @@ const Footer = () => {
   if (!footerLink.isHome && !footerLink.isNoFooterLinks) {
     content = (
       <Link className='pages-link' to="/" >
-        Home
+        HOME
       </Link>
     )
   }
@@ -51,7 +52,7 @@ const Footer = () => {
   else if (footerLink.isHome && !footerLink.isNoFooterLinks) {
     content = (<>
       <Link className='pages-link' to="/contact-up" >
-        Contact Me
+        CONTACT ME
       </Link>
     </>
     )
@@ -65,10 +66,10 @@ const Footer = () => {
       </div>
     ) : (
       <div className="footer-links">
-        <Link to="freelance-service" id="freelance-service">
+        {/* <Link to="freelance-service" id="freelance-service">
           <span>Freelance</span>{" "}
           <span>Service</span>
-        </Link>
+        </Link> */}
         {content}
       </div>
     )
@@ -77,12 +78,13 @@ const Footer = () => {
   return (
     <>
       <SuccessModal show={modal.showSuccessModal} />
-      <div className='footer'>
-        <div className='footer-main'>
-          <h3>suryaXth1nkers</h3>
+      <div className="footer-section">
+        <div className='footer'>
+          <div className='footer-main'>
+            <h3>suryaXth1nkers 2©24</h3>
+          </div>
+          {footerLinkContent}
         </div>
-
-        {footerLinkContent}
       </div>
     </>
   )
